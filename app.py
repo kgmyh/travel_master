@@ -5,7 +5,9 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
 from crew import TravelCoordinatorCrew
-
+import sys
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 load_dotenv()
 
 # Streamlit 앱 제목
